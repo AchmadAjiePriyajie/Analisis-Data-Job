@@ -106,7 +106,7 @@ with tab3:
     top_jobs = df['job_title'].value_counts().head(10)
     fig, ax = plt.subplots(figsize=(8, 5))
     sns.barplot(x=top_jobs.values, y=top_jobs.index, palette='viridis', ax=ax)
-    ax.set_xlabel("Jumlah Pekerjaan")
+    ax.set_xlabel("Jumlah")
     ax.set_ylabel("Job Title")
     ax.set_title("Top 10 Job Title Terbanyak")
     st.pyplot(fig)
