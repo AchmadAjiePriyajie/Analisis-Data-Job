@@ -19,8 +19,8 @@ st.markdown("Analisis eksploratif interaktif dari data pasar kerja — meliputi 
 
 # === Sidebar Filter ===
 st.sidebar.header("🔍 Filter Data")
-exp_filter = st.sidebar.multiselect("Filter berdasarkan Experience Group:", sorted(df['experience_group'].dropna().unique()))
-edu_filter = st.sidebar.multiselect("Filter berdasarkan Education Level:", sorted(df['education_level'].dropna().unique()))
+exp_filter = st.sidebar.multiselect("Filter berdasarkan Pengalaman Kerja:", sorted(df['experience_group'].dropna().unique()))
+edu_filter = st.sidebar.multiselect("Filter berdasarkan Tingkat Pendidikan:", sorted(df['education_level'].dropna().unique()))
 if exp_filter:
     df = df[df['experience_group'].isin(exp_filter)]
 if edu_filter:
